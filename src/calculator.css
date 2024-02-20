@@ -1,0 +1,79 @@
+/* it selects the root element which is the HTML element */
+:root {
+    --primary: #d81e5b;
+    --secondary: #8c38ff;
+    --dark: #131a26;
+    --light: #eee;
+  }
+  * {
+    margin: 0;
+    padding: 10px;
+    /* box-sizing: border-box; */
+    font-family: 'Fira Sans', sans-serif;
+  }
+  body {
+    background-color: var(--light)
+  } 
+  
+  .App {
+    display: flex; 
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  
+  .calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--dark);
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;  
+    box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
+    text-align: right;
+  };
+  
+  .display {
+    padding: 16px;
+    text-align: right;
+    font-size: 24px;
+  } 
+  
+  
+  button {
+    appearance: none;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  /* it makes the button a little less visible  */
+  button:hover {
+    opacity: 0.9;
+  } 
+  
+  .operators {
+    display: flex;
+  }
+   /* // flex :1 ===  flex: 1 1 0% which sets length of all the flexible items equal  */
+  .operators button {
+     flex: 1 1 0%; 
+     background-color: var(--primary);
+     font-weight: 700;
+   }
+  
+   .digits {
+     display: flex;
+     flex-wrap: wrap;
+   }
+   .digits button {
+     flex: 1 1 33.333%;
+     max-width: 33.333%;
+     background-color: var(--dark);
+   }
+  
+  
